@@ -113,11 +113,15 @@ namespace HubSpot.NET.Core.Requests
 
             // Convert all the entities
             var jsonEntities = expandoDict[propSerializedName];
+            // Generic entity type should have IHubSpotModel implemented
+            var converter = genericEntityType.GetMethod("FromHubSpotDataEntity");
             foreach (var entry in jsonEntities as List<object>)
             {
                 // convert single entity
                 var expandoEntry = entry as ExpandoObject;
                 var dto = ConvertSingleEntity(expandoEntry, Activator.CreateInstance(genericEntityType));
+                converter?.Invoke(dto, new[] { expandoEntry });
+
                 // add entity to list
                 listAddMethod.Invoke(listInstance, new[] { dto });
             }
