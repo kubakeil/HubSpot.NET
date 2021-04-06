@@ -175,7 +175,7 @@
             }
 
             var path = $"{new DealRecentListHubSpotModel<T>().RouteBasePath}/deal/recent/created"
-                .SetQueryParam("limit", opts.Limit);
+                .SetQueryParam("count", opts.Limit);
 
             if (opts.Offset.HasValue)
             {
@@ -211,7 +211,7 @@
             }
 
             var path = $"{new DealRecentListHubSpotModel<T>().RouteBasePath}/deal/recent/modified"
-                .SetQueryParam("limit", opts.Limit);
+                .SetQueryParam("count", opts.Limit);
 
             if (opts.Offset.HasValue)
             {
