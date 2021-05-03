@@ -39,6 +39,6 @@ namespace HubSpot.NET.Api.Engagement
         /// The return DTO from List contains the current "offset" that you can inject into your next list call 
         /// to continue the listing process
         /// </remarks>
-        public int? Offset { get; set; } = null;
+        public long? Offset { get; set; } = null;
     }
 }
