@@ -144,7 +144,7 @@
                 path = path.SetQueryParam("properties", opts.PropertiesToInclude);
             }
 
-            var data = _client.ExecuteList<DealListHubSpotModel<T>>(path, opts);
+            var data = _client.ExecuteList<DealListHubSpotModel<T>>(path);
 
             return data;
         }

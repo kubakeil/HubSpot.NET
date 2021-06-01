@@ -223,7 +223,7 @@
             
             path = path.SetQueryParam("showListMemberships", opts.ShowListMemberships);
             
-            var data = _client.ExecuteList<ContactListHubSpotModel<T>>(path, opts);
+            var data = _client.ExecuteList<ContactListHubSpotModel<T>>(path);
 
             return data;
         }
@@ -249,7 +249,7 @@
                 path = path.SetQueryParam("offset", opts.Offset);
             }
 
-            var data = _client.ExecuteList<ContactSearchHubSpotModel<T>>(path, opts);
+            var data = _client.ExecuteList<ContactSearchHubSpotModel<T>>(path);
 
             return data;
         }
@@ -291,7 +291,7 @@
             
             path = path.SetQueryParam("showListMemberships", opts.ShowListMemberships);
             
-            var data = _client.ExecuteList<ContactListHubSpotModel<T>>(path, opts);
+            var data = _client.ExecuteList<ContactListHubSpotModel<T>>(path);
 
             return data;
         }

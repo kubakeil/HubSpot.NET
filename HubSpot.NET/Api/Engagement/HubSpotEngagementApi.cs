@@ -86,7 +86,7 @@
                 path = path.SetQueryParam("offset", opts.Offset);
             }
 
-            var data = _client.ExecuteList<EngagementListHubSpotModel<T>>(path, opts, convertToPropertiesSchema: false);
+            var data = _client.ExecuteList<EngagementListHubSpotModel<T>>(path, convertToPropertiesSchema: false);
             return data;
         }
 
@@ -108,7 +108,7 @@
                 path = path.SetQueryParam("offset", opts.Offset);
             }
 
-            var data = _client.ExecuteList<EngagementListHubSpotModel<T>>(path, opts, convertToPropertiesSchema: false);
+            var data = _client.ExecuteList<EngagementListHubSpotModel<T>>(path, convertToPropertiesSchema: false);
             return data;
         }
 
@@ -156,7 +156,7 @@
                 path = path.SetQueryParam("offset", opts.Offset);
             }
 
-            var data = _client.ExecuteList<EngagementListHubSpotModel<T>>(path, opts, convertToPropertiesSchema: false);
+            var data = _client.ExecuteList<EngagementListHubSpotModel<T>>(path, convertToPropertiesSchema: false);
             return data;
         }
 
