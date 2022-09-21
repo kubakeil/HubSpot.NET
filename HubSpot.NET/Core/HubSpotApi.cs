@@ -26,9 +26,9 @@ namespace HubSpot.NET.Core
 
         public IHubSpotEmailSubscriptionsApi EmailSubscriptions { get; }
 
-        public HubSpotApi(string apiKey)
+        public HubSpotApi(string apiKey, bool useOAuth)
         {
-            IHubSpotClient client = new HubSpotBaseClient(apiKey);
+            IHubSpotClient client = new HubSpotBaseClient(apiKey, useOAuth);
 
             Company = new HubSpotCompanyApi(client);
             Contact = new HubSpotContactApi(client);
